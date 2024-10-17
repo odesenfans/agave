@@ -1,0 +1,35 @@
+[package]
+name = "state-svm-bench"
+publish = false
+version = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+bincode = { workspace = true }
+clap = { workspace = true }
+criterion = { workspace = true }
+log = { workspace = true }
+rayon = { workspace = true }
+solana-accounts-db = { workspace = true, features = ["dev-context-only-utils"] }
+solana-logger = { workspace = true }
+solana-measure = { workspace = true }
+solana-runtime = { workspace = true }
+solana-sdk = { workspace = true }
+solana-svm = { workspace = true }
+solana-type-overrides = { workspace = true }
+solana-version = { workspace = true }
+
+# Tree dependencies
+jmt = { version = "0.10.0", features = ["mocks"] }
+
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[[bench]]
+name = "execute_txs_and_hash_bank"
+harness = false

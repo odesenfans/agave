@@ -104,6 +104,7 @@ members = [
     "sdk/program",
     "send-transaction-service",
     "stake-accounts",
+    "state-svm-bench",
     "storage-bigtable",
     "storage-bigtable/build-proto",
     "storage-proto",
