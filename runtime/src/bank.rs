@@ -939,7 +939,7 @@ pub struct ExecutedTransactionCounts {
 }
 
 impl Bank {
-    fn default_with_accounts(accounts: Accounts) -> Self {
+    pub fn default_with_accounts(accounts: Accounts) -> Self {
         let mut bank = Self {
             skipped_rewrites: Mutex::default(),
             incremental_snapshot_persistence: None,
